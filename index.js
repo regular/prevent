@@ -14,6 +14,7 @@
 
 module.exports = function(e){
   e = e || window.event
+  e.isDefaultPrevented = true
   return e.preventDefault
     ? e.preventDefault()
     : e.returnValue = false;
